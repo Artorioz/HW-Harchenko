@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class HW140 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        double max = Double.MIN_VALUE;
-        double max2 = Double.MIN_VALUE;
-        double vvod = 0;
-        System.out.println("0,5=end");
+        int max = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+        int vvod = 0;
+        System.out.println("Для выхода введите не число");
         do {
-            System.out.print("Vvedite chislo:");
-            vvod = in.nextDouble();
+            System.out.print("Введите:");
+            vvod = in.nextInt();
             if (vvod > max) {
                 max2 = max;
                 max = vvod;
@@ -19,11 +19,11 @@ public class HW140 {
                 }
             }
 
-        } while (vvod != 0.5);
+        } while (in.hasNextInt());
         if(max2==Double.MIN_VALUE || max2==0.5){
             System.out.println("No");
         } else {
-            if(max2!=Double.MIN_VALUE && max2!=0.5){
+            if(max2!=Double.MIN_VALUE && in.hasNextInt()){
                 System.out.println("Max2:" + max2);
             }
         }

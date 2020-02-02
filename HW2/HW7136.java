@@ -6,12 +6,12 @@ public class HW7136 {
         double vvod;
         int maxposl = 0;
         int max = 0;
-        System.out.println("Для остановки введите 0,5");
-        vvod = in.nextDouble();
+        System.out.println("Для остановки введите не число");
+        vvod = in.nextInt();
         double srav = vvod;
-        if (vvod != 0.5) {
+        if (in.hasNextInt()) {
             do {
-                vvod = in.nextDouble();
+                vvod = in.nextInt();
                 if (srav == vvod) {
                     maxposl++;
                 } else {
@@ -20,7 +20,7 @@ public class HW7136 {
                 if (max < maxposl) {
                     max = maxposl;
                 }
-            } while (vvod != 0.5);
+            } while (in.hasNextInt());
             System.out.print("Максимальное число идущих подряд чисел:" + max);
         } else {
             System.out.print("Максимальное число идущих подряд чисел:" + max);

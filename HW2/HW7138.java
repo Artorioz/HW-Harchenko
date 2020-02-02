@@ -5,10 +5,10 @@ public class HW7138 {
         Scanner in = new Scanner(System.in);
         int kolvovsego=1;
         int nomernulay=0;
-        double vvod;
-        System.out.println("Для завершения введите 0,5");
+        int vvod;
+        System.out.println("Для завершения введите букву");
         do{
-            vvod = in.nextDouble();
+            vvod = in.nextInt();
             if(vvod!=0){
                 kolvovsego++;
             } else {
@@ -17,7 +17,7 @@ public class HW7138 {
                     kolvovsego++;
                 }
             }
-        } while(vvod!=0.5);
+        } while(in.hasNextInt());
         if(nomernulay!=0) {
             System.out.print("Номер первого нуля в последовательности:"+nomernulay);
         } else {

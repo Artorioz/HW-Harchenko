@@ -6,16 +6,16 @@ public class HW143 {
         int vvod = Integer.MIN_VALUE;
         int prov = Integer.MIN_VALUE;
         int del = 0;
-        System.out.println("End=other(0 && 1)");
+        System.out.println("Для окончания введите что-то отличное от 0 и 1");
         do{
-            System.out.print("Vvod:");
+            System.out.print("Введите:");
             vvod = in.nextInt();
             if(vvod==1 && prov==0){
                 del++;
             }
             prov = vvod;
 
-        } while(vvod>=0 && vvod<=1);
+        } while(vvod>=0 && vvod<=1 && in.hasNextInt());
         System.out.println("Del:"+del);
     }
 }
