@@ -3,13 +3,12 @@ import java.util.Scanner;
 public class HW7136 {
     public static void main(String args[]) {
         Scanner in = new Scanner(System.in);
-        double vvod;
+        int vvod;
         int maxposl = 0;
         int max = 0;
         System.out.println("Для остановки введите не число");
         vvod = in.nextInt();
-        double srav = vvod;
-        if (in.hasNextInt()) {
+        int srav = vvod;
             do {
                 vvod = in.nextInt();
                 if (srav == vvod) {
@@ -22,8 +21,5 @@ public class HW7136 {
                 }
             } while (in.hasNextInt());
             System.out.print("Максимальное число идущих подряд чисел:" + max);
-        } else {
-            System.out.print("Максимальное число идущих подряд чисел:" + max);
         }
     }
-}

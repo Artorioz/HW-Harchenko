@@ -5,7 +5,7 @@ public class HW140 {
         Scanner in = new Scanner(System.in);
         int max = Integer.MIN_VALUE;
         int max2 = Integer.MIN_VALUE;
-        int vvod = 0;
+        int vvod;
         System.out.println("Для выхода введите не число");
         do {
             System.out.print("Введите:");
@@ -20,10 +20,10 @@ public class HW140 {
             }
 
         } while (in.hasNextInt());
-        if(max2==Double.MIN_VALUE || max2==0.5){
+        if(max2==Double.MIN_VALUE){
             System.out.println("No");
         } else {
-            if(max2!=Double.MIN_VALUE && in.hasNextInt()){
+            if(max2!=Double.MIN_VALUE){
                 System.out.println("Max2:" + max2);
             }
         }

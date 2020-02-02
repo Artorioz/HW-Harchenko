@@ -11,19 +11,15 @@ public class HW135 {
         System.out.println("Число для выхода введите , что угодно кроме числа.");
         System.out.print("Введите число:");
         vvod=in.nextDouble();
-        if (in.hasNextInt()) {
-            kol=1;
-            sum = vvod;
             do {
                 System.out.print("Введите число:");
                 vvod = in.nextDouble();
                 sum = sum + vvod;
                 kol++;
-
-            } while (in.hasNextInt());
+            } while (in.hasNextDouble());
             aref = sum / kol;
             System.out.print("Среднее арифметическое:" + aref);
-        } else {
+        if(kol==0){
             System.out.println("Пока!");
         }
     }

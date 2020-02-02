@@ -5,8 +5,8 @@ public class HW7139 {
         Scanner in = new Scanner(System.in);
         int vvod;
         int kolvo = 1;
-        double ost;
-        System.out.println("Для завершения введите 0,5");
+        int ost;
+        System.out.println("Для завершения введите не число");
         vvod= in.nextInt();
         ost = vvod;
         do{
